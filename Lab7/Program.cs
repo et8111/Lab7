@@ -13,7 +13,7 @@ namespace Lab7
         {
             Console.Write("ENTER NAME: ");
             string name = Console.ReadLine();
-            if (!Regex.IsMatch(name, @"^[a-zA-Z]{0,30}$"))
+            if (!Regex.IsMatch(name, @"^[A-Z][A-Za-z]{0,29}$"))
             {
                 Console.WriteLine("Invalid Name Format.");
                 NameVal();
@@ -25,22 +25,9 @@ namespace Lab7
         {
             Console.Write("ENTER EMAIL: ");
             string email = Console.ReadLine();
-            bool flag = Regex.IsMatch(email, @"^[A-Za-z0-9@]{5,30}.{3}[.a-z]$");
-            if (!email.Contains("@"))
+            if (!Regex.IsMatch(email, @"^[A-Za-z0-9]{0,30}@[A-Za-z]{0,30}\.[a-z]{1,2}"))
             {
-                Console.WriteLine("Invalid Email Address Format.");
-                EmailVal();
-            }
-            if (!email.Contains("."))
-            {
-                Console.WriteLine("Invalid Email Address Format.");
-                EmailVal();
-            }
-            if (email.IndexOf('.') >= email.Length - 4 && email.IndexOf('.') <= email.Length - 3)
-                flag = true;
-            else
-            {
-                Console.WriteLine("Invalid Email Address Format.");
+                Console.WriteLine("Invalid Name Format.");
                 EmailVal();
             }
             return true;
