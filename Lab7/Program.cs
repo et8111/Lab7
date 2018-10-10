@@ -56,6 +56,18 @@ namespace Lab7
             }
             return true;
         }
+        
+        public static bool HTMLExtra()
+        {
+            Console.Write("ENTER HTML STUFF: ");
+            string html = Console.ReadLine();
+            if (!Regex.IsMatch(html, @"<[a-zA-Z]{0,50}>.{0,100}</[a-zA-Z]{0,50}>"))
+            {
+                Console.WriteLine("Invalid HTML Format.");
+                HTMLExtra();
+            }
+            return true;
+        }
 
         static void Main(string[] args)
         {
@@ -66,6 +78,8 @@ namespace Lab7
             PhoneVal();
             Console.WriteLine();
             DateVal();
+            Console.WriteLine();
+            HTMLExtra();
             Console.WriteLine("\n HELL YEAH");
         }
     }
