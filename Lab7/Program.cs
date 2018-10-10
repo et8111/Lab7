@@ -25,7 +25,7 @@ namespace Lab7
         {
             Console.Write("ENTER EMAIL: ");
             string email = Console.ReadLine();
-            if (!Regex.IsMatch(email, @"^[A-Za-z0-9]{0,30}@[A-Za-z]{0,30}\.[a-z]{1,2}"))
+            if (!Regex.IsMatch(email, @"^[A-Za-z0-9]{5,30}@[A-Za-z]*\.[a-z]{1,2}"))
             {
                 Console.WriteLine("Invalid Name Format.");
                 EmailVal();
@@ -61,7 +61,7 @@ namespace Lab7
         {
             Console.Write("ENTER HTML STUFF: ");
             string html = Console.ReadLine();
-            if (!Regex.IsMatch(html, @"<[a-zA-Z]{0,50}>.{0,100}</[a-zA-Z]{0,50}>"))
+            if (!Regex.IsMatch(html, @"<.*>.*</.*>"))
             {
                 Console.WriteLine("Invalid HTML Format.");
                 HTMLExtra();
