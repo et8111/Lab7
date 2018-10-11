@@ -71,16 +71,16 @@ namespace Lab7
 
         static void Main(string[] args)
         {
-            //NameVal();
-            //Console.WriteLine();
-            //EmailVal();
-            //Console.WriteLine();
-            //PhoneVal();
-            //Console.WriteLine();
+            NameVal();
+            Console.WriteLine();
+            EmailVal();
+            Console.WriteLine();
+            PhoneVal();
+            Console.WriteLine();
             DateVal();
             Console.WriteLine();
-            //HTMLExtra();
-            //Console.WriteLine("\n HELL YEAH");
+            HTMLExtra();
+            Console.WriteLine("\n HELL YEAH");
         }
     }
 }
