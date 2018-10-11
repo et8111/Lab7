@@ -49,7 +49,7 @@ namespace Lab7
         {
             Console.Write("WHENS YOUR BIRTHDAY: ");
             string date = Console.ReadLine();
-            if (!Regex.Match(date, @"\d\d/\d\d/\d\d\d\d$").Success)
+            if (!Regex.Match(date, @"[0-3][0-9]/[0-1][0-9]/[1-2][0-9][0-9][0-9]$").Success)
             {
                 Console.WriteLine("Invalid Birthday Format.");
                 DateVal();
@@ -71,16 +71,16 @@ namespace Lab7
 
         static void Main(string[] args)
         {
-            NameVal();
-            Console.WriteLine();
-            EmailVal();
-            Console.WriteLine();
-            PhoneVal();
-            Console.WriteLine();
+            //NameVal();
+            //Console.WriteLine();
+            //EmailVal();
+            //Console.WriteLine();
+            //PhoneVal();
+            //Console.WriteLine();
             DateVal();
             Console.WriteLine();
-            HTMLExtra();
-            Console.WriteLine("\n HELL YEAH");
+            //HTMLExtra();
+            //Console.WriteLine("\n HELL YEAH");
         }
     }
 }
